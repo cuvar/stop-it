@@ -7,10 +7,9 @@ function blockSite() {
   document.body.appendChild(h1);
 
   const p = document.createElement('p');
-  p.textContent = 'You wouldn\'t have used this extension if you really wanted to access the website';
+  p.textContent = 'You wouldn\'t have used this extension if you really wanted to access the website.';
   p.classList.add('block-text');
   document.body.appendChild(p);
-  document.body.style.backgroundColor = 'black';
 }
 
 
