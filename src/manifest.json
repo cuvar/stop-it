@@ -1,10 +1,17 @@
 {
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
-  "version": "1.0",
+  "name": "stop-it",
+  "description": "A dead simple Chrome extension to block websites. Uses password protection to prevent you from disabling it.",
+  "version": "0.1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
-  }
+    "default_title": "Stop it."
+  },
+  "background": {
+    "service_worker": "scripts/service-worker.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ]
 }
