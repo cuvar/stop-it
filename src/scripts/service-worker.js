@@ -12,6 +12,10 @@ chrome.runtime.onInstalled.addListener(() => {
     .catch((err) => console.warn("unexpected error", err))
 });
 
+chrome.action.onClicked.addListener((tab) => {
+  startBlocking(tab.id);
+});
+
 function startBlocking(tabId) {
   chrome.scripting.insertCSS({
     files: ["styles/block.css"],
